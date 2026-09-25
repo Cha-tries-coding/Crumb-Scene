@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/Crumb-Scene/',
+  base: '/Crumb-Scene-V1/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
