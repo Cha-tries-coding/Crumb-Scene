@@ -1,53 +1,54 @@
 # Crumb Scene
 
-Application interactive de diagnostic pâtissier, construite avec React, TypeScript, Vite et Tailwind CSS.
+Crumb Scene is an interactive pastry investigation game built with React, TypeScript, Vite and Tailwind CSS.
 
-## Lancer le projet
+The player examines a pastry-related problem, studies visual clues, runs tests and identifies the most likely cause.
 
-Prérequis : Node.js 22 et pnpm. Le dépôt contient déjà le lockfile pnpm.
+The project was originally prototyped in Figma Make, then rebuilt as a structured and maintainable web application.
+
+## Concept
+
+Each case presents a pastry that did not turn out as expected.
+
+The player must:
+
+1. Observe the result.
+2. Review possible causes.
+3. Run diagnostic tests.
+4. Compare the results.
+5. Identify the most likely explanation.
+
+The goal is to turn pastry troubleshooting into a short interactive investigation rather than a traditional quiz.
+
+## Features
+
+- Interactive pastry diagnosis cases
+- Multiple suspects and possible causes
+- Step-by-step testing system
+- Dynamic visual feedback
+- Case-specific images and content
+- Reusable interface components
+- Responsive web interface
+- Montserrat typography throughout the application
+
+## Tech stack
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- pnpm
+
+## Run the project locally
+
+### Requirements
+
+- Node.js 22
+- pnpm
+
+### Installation
 
 ```bash
 corepack enable
 pnpm install
 pnpm dev
-```
-
-Vite affiche ensuite l'adresse locale à ouvrir dans le navigateur.
-
-## Commandes utiles
-
-```bash
-pnpm dev        # serveur de développement
-pnpm build      # vérification TypeScript puis build de production
-pnpm preview    # prévisualisation du build
-pnpm typecheck  # vérification TypeScript seule
-pnpm format     # formatage du projet
-```
-
-## Structure
-
-```text
-src/
-├── assets/images/       # images locales des trois cas
-├── components/          # composants UI réutilisables
-│   └── previews/        # aperçus visuels dynamiques des tests
-├── data/cases.ts        # contenu et logique métier des cas
-├── screens/             # écrans du jeu
-├── types/game.ts        # types TypeScript partagés
-├── utils/game.ts        # fonctions utilitaires
-├── App.tsx              # orchestration et état global du jeu
-├── index.css            # thème et styles globaux
-└── main.tsx             # point d'entrée React
-```
-
-## Personnaliser le jeu
-
-- Pour modifier le texte, les suspects, les variables ou la logique d'un cas : `src/data/cases.ts`.
-- Pour modifier un écran : `src/screens/`.
-- Pour modifier les composants communs : `src/components/`.
-- Pour remplacer une image : `src/assets/images/` puis mettre à jour son import dans `src/data/cases.ts`.
-- La typographie du projet est Montserrat sur l'ensemble de l'interface.
-
-## Nettoyage par rapport à l'export Figma Make
-
-Le dépôt ne contient plus les fichiers spécifiques à Figma Make, le dossier de build `download/`, ni les configurations d'environnement propres à Figma. Les images des cas sont stockées localement dans le dépôt et le code a été séparé en modules pour faciliter la maintenance.
